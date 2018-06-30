@@ -1,0 +1,8 @@
+/* By setting grid-template-columns to "1fr 1fr 1fr", the grid split the entire grid into 3 equal fractions. Each column take up one fraction unit */
+/* The first parameter of the repeat function is the amount of rows or columns. The second parameter is the height or the width of the rows or columns. */
+/* grid-template is the shorthand method for grid-template-columns and grid-template-rows. Start with the rows and then the columns */
+.container {
+    display: grid;
+    grid-template: repeat(2, 50px) / repeat(3, 1fr);
+    grid-gap: 3px;
+}
