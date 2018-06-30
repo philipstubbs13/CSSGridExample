@@ -3,6 +3,26 @@
 /* grid-template is the shorthand method for grid-template-columns and grid-template-rows. Start with the rows and then the columns */
 .container {
     display: grid;
-    grid-template: repeat(2, 50px) / repeat(3, 1fr);
     grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px 200px 40px;
+}
+
+/* Header starts at the first column line and ends at the 3rd column line.*/
+.header {
+    grid-column: 2 / -1;
+}
+
+.menu {
+    grid-row: 1 / 3;
+}
+
+.content {
+    grid-column: 2 / -1;
+}
+
+/* Footer starts at the first column line and spans across 2 columns.*/
+/* -1 targets the very last column line */
+.footer {
+    grid-column: 1 / -1;
 }
