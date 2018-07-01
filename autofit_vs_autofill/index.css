@@ -1,0 +1,21 @@
+/* auto-fit - amount of columns grows with the size of the grid */
+/* The four items we have actually fit the grid. */
+.container {
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 100px 100px;
+}
+
+/* auto-fill adds a fifth column even though we don't have a fifth element to add there. */
+.container2 {
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: 100px 100px;
+}
+
+/* Under the hood, both of them add four column tracks. Auto-fit collapses new columns to 0px in width. Items fit to the grid regardless */
+/* With auto-fill, at every 100px threshold, it will add new column tracks that are basically empty. */
