@@ -1,0 +1,43 @@
+/* Flexbox is built for one dimensional layouts (goes in one direction from left to right being just a single row).*/
+/* CSS Grid is built for two dimensional layouts (layout has both rows and columns) */
+/* Flexbox takes spaces in the content. Flexbox is content first */
+/* Grid is layout first. It takes spaces in the layout. You are constrained by the layout you define. We place the element according to the layout*/
+/* You want to combine css grid with flexbox*/
+
+.flexbox-header {
+    display: flex;
+}
+
+.flexbox-header > div:nth-child(3) {
+    margin-left: auto;
+}
+
+/* Giving the grid 12 columns (1 fraction each) and three rows */
+.grid-page {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px 200px 40px;
+}
+
+/* flex container*/
+.header {
+    grid-column: 1 / -1;
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+
+.header > div:nth-child(3) {
+    margin-left: auto;
+}
+
+.menu {
+    grid-column: 1 / 2;
+}
+
+.content {
+    grid-column: 2 / -1;
+}
+
+.footer {
+    grid-column: 1 / -1;
+}
