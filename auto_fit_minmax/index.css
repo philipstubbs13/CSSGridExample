@@ -1,0 +1,8 @@
+/* auto-fit varies the amount of columns with the width of the grid */
+/* minmax : column width is minimum 100px and maximum 1 fraction unit */
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+}
